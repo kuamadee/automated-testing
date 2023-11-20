@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.12.0 on darwin)" generated="20231120 13:52:28.571" rpa="false" schemaversion="4">
+<suite id="s1" name="Login-Test-Suit" source="/Users/kommetkhongmuang/Desktop/robot/login-test-suit.robot">
+<test id="s1-t1" name="LP-01 ตรวจสอบฟังชั่น login กรณีใช้ข้อมูลที่ถูกต้อง" line="30">
+<kw name="Open chrome">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231120 13:52:28.934" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<status status="PASS" starttime="20231120 13:52:28.932" endtime="20231120 13:52:37.024"/>
+</kw>
+<status status="PASS" starttime="20231120 13:52:28.932" endtime="20231120 13:52:37.025"/>
+</kw>
+<kw name="Login using valid username &amp; password">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=user-name</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231120 13:52:37.034" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
+<status status="PASS" starttime="20231120 13:52:37.029" endtime="20231120 13:52:37.508"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231120 13:52:37.509" level="INFO">Typing text 'secret_sauce' into text field 'name=password'.</msg>
+<status status="PASS" starttime="20231120 13:52:37.508" endtime="20231120 13:52:37.709"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id=login-button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231120 13:52:37.710" level="INFO">Clicking element 'id=login-button'.</msg>
+<status status="PASS" starttime="20231120 13:52:37.709" endtime="20231120 13:52:37.916"/>
+</kw>
+<status status="PASS" starttime="20231120 13:52:37.027" endtime="20231120 13:52:37.916"/>
+</kw>
+<status status="PASS" starttime="20231120 13:52:28.930" endtime="20231120 13:52:37.916"/>
+</test>
+<test id="s1-t2" name="LP-02 ตรวจสอบฟังชั่น login กรณีไม่กรอก username" line="35">
+<kw name="Open chrome">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231120 13:52:37.920" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<status status="PASS" starttime="20231120 13:52:37.919" endtime="20231120 13:52:41.808"/>
+</kw>
+<status status="PASS" starttime="20231120 13:52:37.919" endtime="20231120 13:52:41.808"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231120 13:52:41.810" level="INFO">Typing text 'secret_sauce' into text field 'name=password'.</msg>
+<status status="PASS" starttime="20231120 13:52:41.809" endtime="20231120 13:52:42.054"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id=login-button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231120 13:52:42.055" level="INFO">Clicking element 'id=login-button'.</msg>
+<status status="PASS" starttime="20231120 13:52:42.055" endtime="20231120 13:52:42.214"/>
+</kw>
+<status status="PASS" starttime="20231120 13:52:37.917" endtime="20231120 13:52:42.214"/>
+</test>
+<test id="s1-t3" name="LP-03 ตรวจสอบฟังชั่น login กรณีกรอก username ที่ไม่ตรงกับข้อมูลที่มีในระบบ" line="41">
+<kw name="Open chrome">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231120 13:52:42.219" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<status status="PASS" starttime="20231120 13:52:42.218" endtime="20231120 13:52:46.804"/>
+</kw>
+<status status="PASS" starttime="20231120 13:52:42.218" endtime="20231120 13:52:46.805"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=user-name</arg>
+<arg>wrongusername</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231120 13:52:46.807" level="INFO">Typing text 'wrongusername' into text field 'id=user-name'.</msg>
+<status status="PASS" starttime="20231120 13:52:46.806" endtime="20231120 13:52:47.096"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231120 13:52:47.097" level="INFO">Typing text 'secret_sauce' into text field 'name=password'.</msg>
+<status status="PASS" starttime="20231120 13:52:47.097" endtime="20231120 13:52:47.299"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id=login-button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231120 13:52:47.299" level="INFO">Clicking element 'id=login-button'.</msg>
+<status status="PASS" starttime="20231120 13:52:47.299" endtime="20231120 13:52:47.370"/>
+</kw>
+<status status="PASS" starttime="20231120 13:52:42.215" endtime="20231120 13:52:47.370"/>
+</test>
+<test id="s1-t4" name="LP-04 ตรวจสอบฟังชั่น login กรณีกรอก username น้อยกว่าจำนวนขั้นต่ำระบบรองรับจำนวน 5-20 ตัวอักษร" line="48">
+<kw name="Open chrome">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231120 13:52:47.374" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<status status="PASS" starttime="20231120 13:52:47.373" endtime="20231120 13:52:50.733"/>
+</kw>
+<status status="PASS" starttime="20231120 13:52:47.373" endtime="20231120 13:52:50.733"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=user-name</arg>
+<arg>shrt</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231120 13:52:50.734" level="INFO">Typing text 'shrt' into text field 'id=user-name'.</msg>
+<status status="PASS" starttime="20231120 13:52:50.734" endtime="20231120 13:52:50.977"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231120 13:52:50.978" level="INFO">Typing text 'secret_sauce' into text field 'name=password'.</msg>
+<status status="PASS" starttime="20231120 13:52:50.977" endtime="20231120 13:52:51.182"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id=login-button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231120 13:52:51.183" level="INFO">Clicking element 'id=login-button'.</msg>
+<status status="PASS" starttime="20231120 13:52:51.182" endtime="20231120 13:52:51.254"/>
+</kw>
+<status status="PASS" starttime="20231120 13:52:47.371" endtime="20231120 13:52:51.254"/>
+</test>
+<test id="s1-t5" name="LP-05 ตรวจสอบฟังชั่น login กรณีไม่กรอก password" line="55">
+<kw name="Open chrome">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231120 13:52:51.257" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<status status="PASS" starttime="20231120 13:52:51.256" endtime="20231120 13:52:54.601"/>
+</kw>
+<status status="PASS" starttime="20231120 13:52:51.256" endtime="20231120 13:52:54.601"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=user-name</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231120 13:52:54.606" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
+<status status="PASS" starttime="20231120 13:52:54.605" endtime="20231120 13:52:54.807"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id=login-button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231120 13:52:54.808" level="INFO">Clicking element 'id=login-button'.</msg>
+<status status="PASS" starttime="20231120 13:52:54.808" endtime="20231120 13:52:54.963"/>
+</kw>
+<status status="PASS" starttime="20231120 13:52:51.255" endtime="20231120 13:52:54.963"/>
+</test>
+<test id="s1-t6" name="LP-06 ตรวจสอบฟังชั่น login กรณีกรอก password ไม่ถูกต้อง" line="61">
+<kw name="Open chrome">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231120 13:52:54.966" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<status status="PASS" starttime="20231120 13:52:54.966" endtime="20231120 13:52:58.883"/>
+</kw>
+<status status="PASS" starttime="20231120 13:52:54.966" endtime="20231120 13:52:58.884"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=user-name</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231120 13:52:58.886" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
+<status status="PASS" starttime="20231120 13:52:58.885" endtime="20231120 13:52:59.221"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=password</arg>
+<arg>wrongpassword</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231120 13:52:59.222" level="INFO">Typing text 'wrongpassword' into text field 'name=password'.</msg>
+<status status="PASS" starttime="20231120 13:52:59.221" endtime="20231120 13:52:59.350"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id=login-button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231120 13:52:59.351" level="INFO">Clicking element 'id=login-button'.</msg>
+<status status="PASS" starttime="20231120 13:52:59.350" endtime="20231120 13:52:59.412"/>
+</kw>
+<status status="PASS" starttime="20231120 13:52:54.964" endtime="20231120 13:52:59.413"/>
+</test>
+<test id="s1-t7" name="LP-07 ตรวจสอบฟังชั่น login กรณีกรอก password น้อยกว่าจำนวนขั้นต่ำระบบรองรับจำนวน 6-20 ตัวอักษร" line="68">
+<kw name="Open chrome">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231120 13:52:59.419" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<status status="PASS" starttime="20231120 13:52:59.418" endtime="20231120 13:53:03.153"/>
+</kw>
+<status status="PASS" starttime="20231120 13:52:59.417" endtime="20231120 13:53:03.153"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=user-name</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231120 13:53:03.155" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
+<status status="PASS" starttime="20231120 13:53:03.154" endtime="20231120 13:53:03.451"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=password</arg>
+<arg>shrt</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231120 13:53:03.452" level="INFO">Typing text 'shrt' into text field 'name=password'.</msg>
+<status status="PASS" starttime="20231120 13:53:03.451" endtime="20231120 13:53:03.631"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id=login-button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231120 13:53:03.632" level="INFO">Clicking element 'id=login-button'.</msg>
+<status status="PASS" starttime="20231120 13:53:03.631" endtime="20231120 13:53:03.712"/>
+</kw>
+<status status="PASS" starttime="20231120 13:52:59.414" endtime="20231120 13:53:03.712"/>
+</test>
+<doc>Simple example using SeleniumLibrary.</doc>
+<status status="PASS" starttime="20231120 13:52:28.574" endtime="20231120 13:53:03.714"/>
+</suite>
+<statistics>
+<total>
+<stat pass="7" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="7" fail="0" skip="0" id="s1" name="Login-Test-Suit">Login-Test-Suit</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
